@@ -1,10 +1,11 @@
 <div
   class="option"
+  data-option
   [class]="{
     'option--active':
       (this.selectionService.activeBox | async)?.option?.id === option.id
   }"
   (click)="selectionService.selectOption(option)"
 >
-  <div class="option__label">{{ option.label }}</div>
+  <div class="option__label" data-label>{{ option.label }}</div>
 </div>
